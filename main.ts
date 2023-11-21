@@ -641,8 +641,8 @@ const server = http.createServer(async (req, res) => {
               const title = required(body.get('title'));
               const content = required(body.get('content'));
               const id = required(body.get('id'));
-              const replyTo = required(body.get('replyTo'));
-              const html = renderNewPostPage({ title, content, id }, e.message, replyTo);
+              const replyTo = body.get('replyTo');
+              const html = renderNewPostPage({ title, content, id }, e.message, replyTo ?? undefined);
               res.end(html);
             } catch (_) {
               const html = renderNewPostPage(undefined, e.message, body.get('replyTo') ?? undefined);
