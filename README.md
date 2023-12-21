@@ -14,4 +14,4 @@ So there is only one line of CSS that sets the max width (to make it readable on
 3. `tsc .`
 4. `node main.js`
 
-Everything is stored in the filesystem as JSON files at `./data`.
+Everything is stored in the filesystem as JSON files in `./data`.
